@@ -1,35 +1,29 @@
-# Pokémon Crystal [![Build Status][ci-badge]][ci]
+# Crystal Expansion Dev
 
-This is a disassembly of Pokémon Crystal.
+![Screenshot](crystal-expansion-dev-box-art.jpg)
 
-It builds the following ROMs:
+Based on the pokecrystal disassembly by [**Pret**](https://github.com/pret/pokecrystal)
 
-- Pokemon - Crystal Version (UE) (V1.0) [C][!].gbc `sha1: f4cd194bdee0d04ca4eac29e09b8e4e9d818c133`
-- Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc `sha1: f2f52230b536214ef7c9924f483392993e226cfb`
-- Pokemon - Crystal Version (A) [C][!].gbc `sha1: a0fc810f1d4e124434f7be2c989ab5b5892ddf36`
-- CRYSTAL_ps3_010328d.bin `sha1: c60d57a24bbe8ecf7cba54ab3f90669f97bd330d`
-- CRYSTAL_ps3_us_revise_010710d.bin `sha1: 391ae86b1d5a26db712ffe6c28bbf2a1f804c3c4`
-- CGBBYTE1.784.patch `sha1: a25517f60ca0e887d39ec698aa56a0040532a4b3`
+This is a work-in-progress Quality-of-Life rom hack to expand the vanilla gameplay of Pokemon crystal.
 
-To set up the repository, see [INSTALL.md](INSTALL.md).
+# Features
 
+- **Pocket PC** After recieving your starter, you'll recieve a Pocket PC key item along with your potion that will give you access to the PC without being at your house or the Pokemon Center.
 
-## See also
+![Screenshot](crystal-expansion-dev-0.png)
 
-- [**FAQ**](FAQ.md)
-- [**Documentation**][docs]
-- [**Wiki**][wiki] (includes [tutorials][tutorials])
-- [**Symbols**][symbols]
-- [**Tools**][tools]
+- **Tradeback NPC** For all trade evolutions with or without holding items a Red NPC stands in the back of Elm's Lab to trade your trade evolutions back to you.
 
-You can find us on [Discord (pret, #pokecrystal)](https://discord.gg/d5dubZ3).
+![Screenshot](crystal-expansion-dev-1.png)
 
-For other pret projects, see [pret.github.io](https://pret.github.io/).
+- **Running Shoes** By holding the B button while walking, you can run.
 
-[docs]: https://pret.github.io/pokecrystal/
-[wiki]: https://github.com/pret/pokecrystal/wiki
-[tutorials]: https://github.com/pret/pokecrystal/wiki/Tutorials
-[symbols]: https://github.com/pret/pokecrystal/tree/symbols
-[tools]: https://github.com/pret/gb-asm-tools
-[ci]: https://github.com/pret/pokecrystal/actions
-[ci-badge]: https://github.com/pret/pokecrystal/actions/workflows/main.yml/badge.svg
+- **Gen. 6 Exp. All Key Item** The Exp. Share is now a Key Item that can be toggled on and off to give your whole team EXP points.  You can get this item early by seeing the Elm's Aide NPC in the Ecruteak City East Gate.
+
+- **Earn EXP by catching mons**
+
+- **Kurt makes balls instantly** Instead of waiting until the next day.  Not sure if this'll work for the GS Ball event.
+
+- **Restored Celebi GS Ball Event** After defeating the Elite Four and becoming Champion, go to the Goldenrod City Pokemon Center and an Aide will come up to you and hand you the GS Ball, bring it to Kurt and the next day he'll say something strange is going on in Azalea forest.  Go there, put the GS Ball in the shrine past the cut tree and you'll get to fight/catch a lvl 70 Celebi.
+
+- **Rare Candies, Master Balls and Evolution Stones** All marts, with the exception of a couple like the fake shop in Mahogany before you fight Team Rocket, Mt. Moon and the Underground, have rare candies and master balls for sale at 0 pokedollars and evolution stones are sold on the 3rd floor of the Goldenrod City Department Store.
