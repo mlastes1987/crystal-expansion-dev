@@ -30,4 +30,8 @@ This is a work-in-progress Quality-of-Life rom hack to expand the vanilla gamepl
 
 - **Rare Candies, Master Balls and Evolution Stones** All marts, with the exception of a couple like the fake shop in Mahogany before you fight Team Rocket, Mt. Moon and the Underground, have rare candies and master balls for sale at 0 pokedollars and evolution stones are sold on the 3rd floor of the Goldenrod City Department Store.
 
-- **Known Issues** The dialog for the Elm's Aide NPC in the Ecruteak City East Gate isn't presenting right, but the event to get the Exp. Share works.  This will be fixed in the next update.
+- **Reusable TMs** All 50 TMs are reusable, can't be deposited into the PC and won't be able to be farmed for extras.  This feature is a work in progress.
+
+- **Poke Ball Colors** All poke balls will be shown with their respective colors.
+
+- **Known Issues** Any known or reported issues will be placed here until they are resolved.

@@ -60,7 +60,8 @@ AideTextGreeting:
 	line "#MON I'm supposed to"
 	cont "give you an EXP."
 	cont "SHARE."
-	cont "Have you caught 20 #MON?"
+	
+	para "Have you caught 20 #MON?"
 	done
 
 AideTextFailure:
