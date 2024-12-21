@@ -58,9 +58,9 @@ AideTextGreeting:
 
 	para "If you have caught 20"
 	line "#MON I'm supposed to"
-	
-	para "give you an EXP."
-	line "SHARE."
+	cont "give you an EXP."
+	cont "SHARE."
+	cont "Have you caught 20 #MON?"
 	done
 
 AideTextFailure:
