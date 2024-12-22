@@ -34,4 +34,12 @@ This is a work-in-progress Quality-of-Life rom hack to expand the vanilla gamepl
 
 - **Poke Ball Colors** All poke balls will be shown with their respective colors.
 
+- **Party Menu Colors by Species**
+
+- **Different Color Pallette for Badges**
+
 - **Known Issues** Any known or reported issues will be placed here until they are resolved.
+
+# Credits/Thanks
+
+Thank you to the [**Pret**](http://pret.github.io) team for their tireless work on the Pokemon disassemblies and the tutorials that contributed to making this project.
