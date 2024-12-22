@@ -318,3 +318,14 @@ DEF ITEM_FROM_MEM  EQU $ff
 DEF SAFARI_BALL    EQU $08 ; MOON_STONE
 DEF MOON_STONE_RED EQU $0a ; BURN_HEAL
 DEF FULL_HEAL_RED  EQU $34 ; X_SPEED
+
+; party menu icon palettes
+	const_def
+	const PAL_ICON_RED    ; 0
+	const PAL_ICON_BLUE   ; 1
+	const PAL_ICON_GREEN  ; 2
+	const PAL_ICON_BROWN  ; 3
+	const PAL_ICON_PINK   ; 4
+	const PAL_ICON_GRAY   ; 5
+	const PAL_ICON_TEAL   ; 6
+	const PAL_ICON_PURPLE ; 7
