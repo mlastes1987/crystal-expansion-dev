@@ -1,6 +1,8 @@
 LoadOverworldMonIcon:
 	ld a, e
+	ld b, d
 	call ReadMonMenuIcon
+	ld [wCurIcon], a
 	ld l, a
 	ld h, 0
 	add hl, hl
@@ -9,9 +11,7 @@ LoadOverworldMonIcon:
 	ld a, [hli]
 	ld e, a
 	ld d, [hl]
-	ld b, BANK(Icons)
-	ld c, 8
-	ret
+	jp GetIconBank
 
 SetMenuMonIconColor:
 	push hl
@@ -276,8 +276,14 @@ InitPartyMenuIcon:
 	ld d, 0
 	add hl, de
 	ld a, [hl]
+	push hl
 	call ReadMonMenuIcon
 	ld [wCurIcon], a
+	pop hl
+	ld a, MON_DVS
+	call GetPartyParamLocation
+	ld e, l
+	ld d, h
 	call GetMemIconGFX
 	ldh a, [hObjectStructIndex]
 ; y coord
@@ -334,7 +340,9 @@ NamingScreen_InitAnimatedMonIcon:
 	ld hl, wTempMonDVs
 	call SetMenuMonIconColor
 	ld a, [wTempIconSpecies]
+	push hl
 	call ReadMonMenuIcon
+	pop de
 	ld [wCurIcon], a
 	xor a
 	call GetIconGFX
@@ -351,7 +359,9 @@ MoveList_InitAnimatedMonIcon:
 	call GetPartyParamLocation
 	call SetMenuMonIconColor
 	ld a, [wTempIconSpecies]
+	push hl
 	call ReadMonMenuIcon
+	pop de
 	ld [wCurIcon], a
 	xor a
 	call GetIconGFX
@@ -370,6 +380,7 @@ Trade_LoadMonIconGFX:
 	ld [wCurIcon], a
 	ld a, $62
 	ld [wCurIconTile], a
+	ld de, wTempMonDVs
 	call GetMemIconGFX
 	ret
 
@@ -380,10 +391,14 @@ GetSpeciesIcon:
 	call GetPartyParamLocation
 	call SetMenuMonIconColor
 	ld a, [wTempIconSpecies]
+	push hl
 	call ReadMonMenuIcon
+	pop hl
 	ld [wCurIcon], a
 	pop de
 	ld a, e
+	ld e, l
+	ld d, h
 	call GetIconGFX
 	ret
 
@@ -455,14 +470,16 @@ rept 4
 	add hl, hl
 endr
 
+	push de
 	ld de, vTiles0
 	add hl, de
+	pop de
 	push hl
 
 ; The icons are contiguous, in order and of the same
 ; size, so the pointer table is somewhat redundant.
-	ld a, [wCurIcon]
 	push hl
+	ld a, [wCurIcon]
 	ld l, a
 	ld h, 0
 	add hl, hl
@@ -473,10 +490,18 @@ endr
 	ld d, [hl]
 	pop hl
 
-	lb bc, BANK(Icons), 8
+	call GetIconBank
 	call GetGFXUnlessMobile
 
 	pop hl
+	ret
+
+GetIconBank:
+	ld a, [wCurIcon]
+	cp ICON_MAGIKARP ; first icon in Icons2
+	lb bc, BANK("Mon Icons 1"), 8
+	ret c
+	ld b, BANK("Mon Icons 2")
 	ret
 
 GetGFXUnlessMobile:

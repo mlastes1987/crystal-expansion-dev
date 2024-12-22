@@ -38,6 +38,10 @@ This is a work-in-progress Quality-of-Life rom hack to expand the vanilla gamepl
 
 - **Different Color Pallette for Badges**
 
+- **Colored Party Menu Icons for each Pokemon**  Credit to Chamber and the Minidex team and ShireCrystalEngine for the sprites.
+
+![Screenshot](crystal-expansion-dev-3.png)
+
 - **Known Issues** Any known or reported issues will be placed here until they are resolved.
 
 # Credits/Thanks
