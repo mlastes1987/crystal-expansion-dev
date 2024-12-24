@@ -44,7 +44,7 @@ This is a work-in-progress Quality-of-Life rom hack to expand the vanilla gamepl
 
 ![Screenshot](crystal-expansion-dev-3.png)
 
-- **Known Issues** Any known or reported issues will be placed here until they are resolved.
+- **Known Issues** Experienced a crash while shopping in the Blackthorn City Pokemart, unsure why.   Will have to do more testing. (12/23/24)
 
 # Credits/Thanks
 
