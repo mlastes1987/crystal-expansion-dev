@@ -1,35 +1,39 @@
-# Pokémon Crystal [![Build Status][ci-badge]][ci]
+# Crystal Expansion Dev
 
-This is a disassembly of Pokémon Crystal.
+![Screenshot](crystal-expansion-dev-box-art.jpg)
 
-It builds the following ROMs:
+Based on the pokecrystal disassembly by [**Pret**](https://github.com/pret/pokecrystal)
 
-- Pokemon - Crystal Version (UE) (V1.0) [C][!].gbc `sha1: f4cd194bdee0d04ca4eac29e09b8e4e9d818c133`
-- Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc `sha1: f2f52230b536214ef7c9924f483392993e226cfb`
-- Pokemon - Crystal Version (A) [C][!].gbc `sha1: a0fc810f1d4e124434f7be2c989ab5b5892ddf36`
-- CRYSTAL_ps3_010328d.bin `sha1: c60d57a24bbe8ecf7cba54ab3f90669f97bd330d`
-- CRYSTAL_ps3_us_revise_010710d.bin `sha1: 391ae86b1d5a26db712ffe6c28bbf2a1f804c3c4`
-- CGBBYTE1.784.patch `sha1: a25517f60ca0e887d39ec698aa56a0040532a4b3`
+# Features
 
-To set up the repository, see [INSTALL.md](INSTALL.md).
+- **Tradeback NPC** A Tradeback Red NPC stands in the back of Elm's Lab for you to trade all trade evolutions with.
 
+- **Pocket PC** After receiving your starter Pokemon, one of Elm's Aides near the entrance will hand you a Pocket PC key item after your Potion to allow you to access the PC anywhere outside of your house and Pokemon Center.
 
-## See also
+- **Gen. 6 Exp. Share Key Item** After coming back from Mr. Pokemon and one of the other starters are stolen by Silver, Elm's Aide will hand you the Exp. Share key item with your Poke Balls which distributes EXP points to your whole party in battle and during catches.  You can toggle on and off in the Key Items bag.
 
-- [**FAQ**](FAQ.md)
-- [**Documentation**][docs]
-- [**Wiki**][wiki] (includes [tutorials][tutorials])
-- [**Symbols**][symbols]
-- [**Tools**][tools]
+- **Earn EXP by catching mons**
 
-You can find us on [Discord (pret, #pokecrystal)](https://discord.gg/d5dubZ3).
+- **Party Menu Color Icons** Icons for every Pokemon will be in your party menu instead of the vanilla ones, in color.
 
-For other pret projects, see [pret.github.io](https://pret.github.io/).
+- **Different color pallate for Johto Badges**
 
-[docs]: https://pret.github.io/pokecrystal/
-[wiki]: https://github.com/pret/pokecrystal/wiki
-[tutorials]: https://github.com/pret/pokecrystal/wiki/Tutorials
-[symbols]: https://github.com/pret/pokecrystal/tree/symbols
-[tools]: https://github.com/pret/gb-asm-tools
-[ci]: https://github.com/pret/pokecrystal/actions
-[ci-badge]: https://github.com/pret/pokecrystal/actions/workflows/main.yml/badge.svg
+- **3rd Page in Trainer Card for Kanto Leaders/Badges**
+
+- **Running Shoes** Hold B while walking to run.
+
+- **Show names of TMs when receiving/buying**
+
+- **Kurt makes Pokeballs Instantly** Instead of waiting until the next day, Pokeballs are made instantly.  Unsure if this will work with the GS Ball Event.
+
+- **Restored Celebi GS Ball Event** After defeating the Elite Four and becoming Champion, fly to the Goldenrod City Pokemon Center, a nurse aide will give you the GS Ball item, fly to Ecruteak and give it to Kurt, the next day he'll say that the forest is behaving strangely.  Go to Azalea Forest and put the GS Ball in the shrine past the cut tree.  An animation will occur and you get to fight/catch a lvl 70 Celebi.
+
+- **Rare Candies, Master Balls and Evolution Stones** All marts with the exception of the fake mart in Mahogany before you beat Team Rocket, Mt. Moon and the Underground Path sell Rare Candies and Masterball for 0 Pokedollars.  The 3rd floor of the Goldenrod City Department Store has a clerk that sells all Evolution stones.
+
+- **Known Issues** Any known or reported issues will be put here until they are resolved.
+
+# Credits/Thanks
+
+Thank you to the [**pret**](https://pret.github.io) community whose repository and code tutorials made this possible.
+
+Thank you also to the minidex team and [**fellowship-of-the-roms**](https://github.com/fellowship-of-the-roms/CrystalShireEngine) for the party menu icons.

@@ -5,6 +5,7 @@
 	const ELMSLAB_POKE_BALL2
 	const ELMSLAB_POKE_BALL3
 	const ELMSLAB_OFFICER
+	const ELMSLAB_TRADEBACKNPC
 
 ElmsLab_MapScripts:
 	def_scene_scripts
@@ -460,6 +461,7 @@ AideScript_WalkPotion1:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight1
 	turnobject PLAYER, DOWN
 	scall AideScript_GivePotion
+	scall AideScript_GivePocketPC
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft1
 	end
 
@@ -467,6 +469,7 @@ AideScript_WalkPotion2:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight2
 	turnobject PLAYER, DOWN
 	scall AideScript_GivePotion
+	scall AideScript_GivePocketPC
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft2
 	end
 
@@ -478,6 +481,16 @@ AideScript_GivePotion:
 	writetext AideText_AlwaysBusy
 	waitbutton
 	closetext
+	end
+
+AideScript_GivePocketPC:
+	opentext
+	writetext AideText_GetPocketPCText
+	promptbutton
+	giveitem POCKET_PC
+	writetext AideText_PocketPCInfoText
+	waitbutton
+	closetext
 	setscene SCENE_ELMSLAB_NOOP
 	end
 
@@ -485,6 +498,7 @@ AideScript_WalkBalls1:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight1
 	turnobject PLAYER, DOWN
 	scall AideScript_GiveYouBalls
+	scall AideScript_GiveYouExpShare
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft1
 	end
 
@@ -492,6 +506,7 @@ AideScript_WalkBalls2:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight2
 	turnobject PLAYER, DOWN
 	scall AideScript_GiveYouBalls
+	scall AideScript_GiveYouExpShare
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft2
 	end
 
@@ -505,6 +520,16 @@ AideScript_GiveYouBalls:
 	writetext AideText_ExplainBalls
 	promptbutton
 	itemnotify
+	closetext
+	end
+
+AideScript_GiveYouExpShare:
+	opentext
+	writetext AideText_GetExpShareText
+	promptbutton
+	giveitem EXP_SHARE
+	writetext AideText_ExpShareInfoText
+	waitbutton
 	closetext
 	setscene SCENE_ELMSLAB_NOOP
 	end
@@ -580,6 +605,14 @@ ElmsLabWindow:
 
 .Normal:
 	writetext ElmsLabWindowText1
+	waitbutton
+	closetext
+	end
+
+TradebackNPCScript:
+	faceplayer
+	opentext
+	special TradebackNPC
 	waitbutton
 	closetext
 	end
@@ -1368,6 +1401,30 @@ ElmsLabPCText:
 	line "screen…"
 	done
 
+AideText_GetPocketPCText:
+	text "Oh, I have this"
+	line "for you too."
+
+	para "It's a Pocket PC!"
+	done
+	
+AideText_PocketPCInfoText:
+	text "Use this to manage"
+	line "your party."
+	done
+
+AideText_GetExpShareText:
+	text "Oh, I have this"
+	line "for you too."
+
+	para "It's an Exp. Share!"
+	done
+	
+AideText_ExpShareInfoText:
+	text "This gives your party"
+	line "EXP points."
+	done
+
 ElmsLab_MapEvents:
 	db 0, 0 ; filler
 
@@ -1410,3 +1467,4 @@ ElmsLab_MapEvents:
 	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TotodilePokeBallScript, EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
 	object_event  8,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
 	object_event  5,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CopScript, EVENT_COP_IN_ELMS_LAB
+	object_event  4,  1, SPRITE_RED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TradebackNPCScript, -1
