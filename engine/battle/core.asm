@@ -2153,15 +2153,27 @@ UpdateBattleStateAndExperienceAfterEnemyFaint:
 	ld [wBattleResult], a ; WIN
 	; fallthrough
 ApplyExperienceAfterEnemyCaught:
+	; Preserve bits of non-fainted participants
 	ld a, [wBattleParticipantsNotFainted]
-	push af
-	ld a, d
-	xor %00111111
-	ld [wBattleParticipantsNotFainted], a
+	ld d, a
+	push de
 	call GiveExperiencePoints
-	pop af
-	ld [wBattleParticipantsNotFainted], a
-	ret
+	pop de
+	; If Exp. Share is ON, give 50% EXP to non-participants
+	ld a, [wExpShareToggle]
+	and a
+	ret z
+	ld hl, wEnemyMonBaseExp
+	srl [hl]
+ 	ld a, [wBattleParticipantsNotFainted]
+ 	push af
+ 	ld a, d
+	xor %00111111
+ 	ld [wBattleParticipantsNotFainted], a
+ 	call GiveExperiencePoints
+ 	pop af
+ 	ld [wBattleParticipantsNotFainted], a
+ 	ret
 
 StopDangerSound:
 	xor a
