@@ -32,7 +32,7 @@ Based on the pokecrystal disassembly by [**Pret**](https://github.com/pret/pokec
 
 - **Poke Balls are all their respective colors**
 
-![Screenshot](ball-icons.png)
+![Screenshot](ball-colors.png)
 
 - **3rd Page to Trainer Card for Kanto Leaders/Badges**
 
