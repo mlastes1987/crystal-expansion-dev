@@ -522,7 +522,6 @@ AideScript_GiveYouBalls:
 	promptbutton
 	itemnotify
 	closetext
-	setscene SCENE_ELMSLAB_NOOP
 	end
 
 AideScript_GiveExpShare:
