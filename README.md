@@ -30,6 +30,8 @@ Based on the pokecrystal disassembly by [**Pret**](https://github.com/pret/pokec
 
 - **Show names for TMs bought/received**
 
+- **Rare Candies, Master Balls and Evolution Stones** All Poke Marts and Dept. Stores with the exception of the fake Mart in Mahogany before fighting Team Rocket in their hideout, the Underground Path and Mt. Moon all sell Rare Candies and Master Balls for 0 Pokedollars and a second clerk on the 3rd Floor of the Goldenrod City Dept. Store sells all the evolution stones.
+
 - **Poke Balls are all their respective colors**
 
 ![Screenshot](ball-colors.png)
